@@ -1,0 +1,22 @@
+# Environment
+.env
+.env.*
+
+# Keep example environment file
+!.env.example
+
+# Archives / backups
+*.tar
+*.tar.gz
+*.zip
+
+# Secrets / certificates
+*.pem
+*.key
+*.crt
+*.p12
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
