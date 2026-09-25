@@ -1,9 +1,11 @@
 # Environment
 .env
 .env.*
-
-# Keep example environment file
 !.env.example
+
+# Go
+/bin/
+/vendor/
 
 # Archives / backups
 *.tar

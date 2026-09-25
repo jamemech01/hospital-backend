@@ -53,10 +53,15 @@ func main() {
 
 	router := gin.Default()
 
+	router.GET("/health", func(context *gin.Context) {
+		context.JSON(200, gin.H{
+			"status": "ok",
+		})
+	})
+
 	router.POST("/staff/create", authHandler.CreateStaff)
 	router.POST("/staff/login", authHandler.Login)
 	router.GET("/patient/search", auth.Middleware(jwtSecret), patientHandler.SearchPatients)
 
-	log.Println("server running on :8080")
 	router.Run(":8080")
 }
